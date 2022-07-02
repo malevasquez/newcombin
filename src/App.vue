@@ -2,6 +2,7 @@
   <v-app>
     <AppHeader/>
     <v-main>
+      <div class="container">
       <v-container fluid>
         <v-row>
           <v-col>
@@ -12,6 +13,7 @@
           </v-col>
         </v-row>
       </v-container>
+      </div>
     </v-main>
     <AppFooter/>
   </v-app>
@@ -23,17 +25,18 @@ body {
   background: #eee;
 }
 
-v-container {
+.container {
   background-color: red;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  align-content: center;
+  width: 90%;
+  height: 85%;
+  margin-top: 15px;
+  margin-bottom: 15px
 }
 
-.box {
-  width: 500px;
-  height: 500px;
-  background-color: red;
-  text-align: center;
-  vertical-align: center;
-}
 </style>
 
 <script>

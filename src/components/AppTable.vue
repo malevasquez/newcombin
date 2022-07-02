@@ -1,5 +1,6 @@
 <template>
 
+  <div class="table-container">
   <table>
     <thead>
     <tr>
@@ -11,16 +12,17 @@
     </thead>
     <tbody>
     <tr
-        v-for="item in list"
-        v-bind:key="item.ssn"
+        v-for="member in members"
+        v-bind:key="member.ssn"
     >
-      <td>{{item.firstName}}</td>
-      <td>{{item.lastName}}</td>
-      <td>{{item.address}}</td>
-      <td>{{item.ssn}}</td>
+      <td>{{member.firstName}}</td>
+      <td>{{member.lastName}}</td>
+      <td>{{member.address}}</td>
+      <td>{{member.ssn}}</td>
     </tr>
     </tbody>
   </table>
+  </div>
 </template>
 
 
@@ -29,13 +31,13 @@ export default {
   name: "AppTable",
   data () {
     return {
-      list: [],
+      members: [],
     }
   },
   mounted() {
     fetch("http://localhost:8081/api/members")
         .then(res => res.json())
-        .then(data => this.list = data)
+        .then(data => this.members = data)
         .catch(err => console.log(err.message))
   }
 }
@@ -44,15 +46,30 @@ export default {
 <style scoped>
 
 table {
-  width: 90%;
+  width: 80%;
+  height: 40%;
   border-spacing: 0;
-  padding-top: 35px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+  padding-right: 40px;
+  padding-left: 10px;
+
 }
 td {
   padding: 3px 3px 3px 3px;
   outline: 1px solid black;
   text-align: center;
-  border: none;
+}
+
+.table-container {
+  background-color: white;
+  width: 140%;
+  height: 140%;
+  align-content: center;
+  text-align: left;
+  margin-right: 20px;
+  padding-right: 20px;
 }
 
 </style>

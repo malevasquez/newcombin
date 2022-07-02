@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="form-container">
     <v-row>
       <v-col>
         <v-form
@@ -83,7 +83,7 @@ export default {
       formData: {
         firstName: '',
         lastName: '',
-        address: ' ',
+        address: '',
         ssn: ''
       },
       ssns: [],
@@ -123,24 +123,40 @@ export default {
 
 <style scoped>
 form {
-  width: 170%;
-  margin: 35px auto 35px 100px;
+  width: 180%;
+  margin: auto 35px;
   background: white;
   border-radius: 10px;
+  text-align: center;
+  align-content: center;
 }
 
 v-text-field {
   display: block;
-  padding: 8px 4px;
   width: 100%;
   box-sizing: border-box;
   border: 1px solid black;
-  margin: 4px 0;
+  text-align: center;
 }
 
 .buttons {
   text-align: center;
-  padding-left: 100px;
+  padding-left: 90px;
+  margin-bottom: 100px;
+  float: left;
+  display:inline-flex;
+}
+
+.form-container {
+  background-color: white;
+  width: 100%;
+  height: 90%;
+  align-content: center;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  padding-right: 20px;
 }
 
 
