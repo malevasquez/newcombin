@@ -12,12 +12,12 @@
     <tbody>
     <tr
         v-for="item in list"
-        v-bind:key="item"
+        v-bind:key="item.ssn"
     >
-      <td>{{item}}</td>
-      <td>{{item}}</td>
-      <td>{{item}}</td>
-      <td>{{item}}</td>
+      <td>{{item.firstName}}</td>
+      <td>{{item.lastName}}</td>
+      <td>{{item.address}}</td>
+      <td>{{item.ssn}}</td>
     </tr>
     </tbody>
   </table>
@@ -29,9 +29,15 @@ export default {
   name: "AppTable",
   data () {
     return {
-      list: ["item1", "item2", "item3"],
+      list: [],
     }
   },
+  mounted() {
+    fetch("http://localhost:8081/api/members")
+        .then(res => res.json())
+        .then(data => this.list = data)
+        .catch(err => console.log(err.message))
+  }
 }
 </script>
 

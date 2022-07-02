@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-row align="left">
-      <v-col align="left">
+    <v-row>
+      <v-col>
         <v-form
             ref="form"
             v-model="valid"
@@ -37,7 +37,7 @@
 
         </v-form>
       </v-col>
-      <v-col align="left">
+      <v-col>
       </v-col>
     </v-row>
 
@@ -72,7 +72,10 @@
 <script>
 
 
+import axios from "axios";
+
 export default {
+
   name: "AppForm",
 
   data (){
@@ -109,10 +112,11 @@ export default {
       this.$refs.form.reset()
     },
     async send () {
-      // this.$refs.form.validate();
+      this.$refs.form.validate();
       this.ssns.push(this.formData.ssn)
+      await axios.post("http://localhost:8081/api/members", this.formData)
+          .catch(err => console.log(err.message))
     },
-
   }
 }
 </script>
