@@ -1,42 +1,49 @@
 <template>
   <div>
-    <v-form
-    ref="form"
-    v-model="valid"
-    >
-      <v-text-field
-        v-model="firstName"
-        :rules="firstNameRules"
-        label="First Name"
-        outlined
-        required
-      ></v-text-field>
-      <v-text-field
-          v-model="lastName"
-          :rules="lastNameRules"
-          label="Last Name"
-          outlined
-          required
-      ></v-text-field>
-      <v-text-field
-          v-model="address"
-          :rules="addressRules"
-          label="Address"
-          outlined
-          required
-      ></v-text-field>
-      <v-text-field
-          v-model="ssn"
-          :rules="ssnRules"
-          label="SSN"
-          outlined
-          required
-      ></v-text-field>
+    <v-row align="left">
+      <v-col align="left">
+        <v-form
+            ref="form"
+            v-model="valid"
+        >
+          <v-text-field
+              v-model="formData.firstName"
+              :rules="firstNameRules"
+              label="First Name"
+              outlined
+              required
+          ></v-text-field>
+          <v-text-field
+              v-model="formData.lastName"
+              :rules="lastNameRules"
+              label="Last Name"
+              outlined
+              required
+          ></v-text-field>
+          <v-text-field
+              v-model="formData.address"
+              :rules="addressRules"
+              label="Address"
+              outlined
+              required
+          ></v-text-field>
+          <v-text-field
+              v-model="formData.ssn"
+              :rules="ssnRules"
+              label="SSN"
+              outlined
+              required
+          ></v-text-field>
 
-    </v-form>
+        </v-form>
+      </v-col>
+      <v-col align="left">
+      </v-col>
+    </v-row>
 
-    <v-row align="center">
-      <v-col align="center">
+    <v-row>
+      <v-col class="ml-lg-16" >
+        <div class="buttons">
         <v-btn
             color="error"
             class="mr-4"
@@ -50,56 +57,60 @@
             color="success"
             class="mr-4"
             rounded
-            @click="validate"
+            @click="send"
         >
           Send
         </v-btn>
+        </div>
+      </v-col>
+      <v-col>
       </v-col>
     </v-row>
   </div>
 </template>
 
 <script>
+
+
 export default {
   name: "AppForm",
+
   data (){
     return {
+      formData: {
+        firstName: '',
+        lastName: '',
+        address: ' ',
+        ssn: ''
+      },
+      ssns: [],
       valid: true,
-      firstName: '',
       firstNameRules: [
         v => !!v || 'First name is required',
         v => (v && v.length > 1) || 'First name must be at least 2 characters long',
       ],
-      lastName: '',
       lastNameRules: [
         v => !!v || 'Last name is required',
         v => (v && v.length > 1) || 'Last name must be at least 2 characters long',
       ],
-      address: '',
       addressRules: [
         v => !!v || 'Address is required',
         v => (v && v.length > 1) || 'Address must be at least 2 characters long',
       ],
-      ssn: '',
-      ssns: [],
       ssnRules: [
         (v) => !!v || 'SSN is required',
-        (v) => /\d{3}-\d{2}-\d{4}$/.test(v) || 'SSN must be valid',
+        (v) => /^\d{3}-\d{2}-\d{4}$/.test(v) || 'SSN must be valid',
+        (v) => !this.ssns.includes(v) || 'SSN must be unique',
       ],
     }
   },
   methods: {
-    send() {
-      if(!this.ssns.includes(this.ssn)) {
-        this.ssns.push(this.ssn)
-      }
-      this.ssn = ''
-    },
     reset() {
       this.$refs.form.reset()
     },
-    validate () {
-      this.$refs.form.validate()
+    async send () {
+      // this.$refs.form.validate();
+      this.ssns.push(this.formData.ssn)
     },
 
   }
@@ -108,11 +119,9 @@ export default {
 
 <style scoped>
 form {
-  max-width: 420px;
-  margin: 30px auto;
+  width: 170%;
+  margin: 35px auto 35px 100px;
   background: white;
-  text-align: left;
-  padding: 40px;
   border-radius: 10px;
 }
 
@@ -125,9 +134,10 @@ v-text-field {
   margin: 4px 0;
 }
 
-
-
-
+.buttons {
+  text-align: center;
+  padding-left: 100px;
+}
 
 
 </style>

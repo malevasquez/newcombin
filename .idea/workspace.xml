@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38b616c-db5d-4e71-bd51-49a1f87f1aa6" name="Changes" comment="Implemented footer">
-      <change afterPath="$PROJECT_DIR$/src/components/AppForm.vue" afterDir="false" />
+    <list default="true" id="c38b616c-db5d-4e71-bd51-49a1f87f1aa6" name="Changes" comment="Began implementing form">
+      <change afterPath="$PROJECT_DIR$/src/components/AppTable.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/devskills/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/devskills/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +80,8 @@
       <option name="presentableId" value="Default" />
       <updated>1656734747919</updated>
       <workItem from="1656734759653" duration="2565000" />
-      <workItem from="1656737490879" duration="11227000" />
+      <workItem from="1656737490879" duration="12440000" />
+      <workItem from="1656768203513" duration="4706000" />
     </task>
     <task id="LOCAL-00001" summary="Initial files + header (with tabs)">
       <created>1656737777372</created>
@@ -89,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656739538142</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Began implementing form">
+      <created>1656750654334</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1656750654334</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +124,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial files + header (with tabs)" />
     <MESSAGE value="Implemented footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented footer" />
+    <MESSAGE value="Began implementing form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Began implementing form" />
   </component>
 </project>

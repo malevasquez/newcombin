@@ -33,5 +33,6 @@ export default {
 <style scoped>
 .v-tab {
   text-transform: none !important;
+  border: 1px solid black;
 }
 </style>
