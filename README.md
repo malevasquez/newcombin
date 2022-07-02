@@ -11,7 +11,7 @@ npm install
 ```
 
 ### Start API Server
-This project requires an API server. To start the server locate the `devskills` folder and run the following commands
+This project requires an API server. To start the server open another window, locate the `devskills` folder and run the following commands
 ```
 cd devskills
 npm install
@@ -19,7 +19,7 @@ npm run serve
 ```
 
 ### Compile and Run
-Once the API server is set up return to the root folder and run the project using
+Once the API server is set up run the project from the root folder using
 ```
 npm run serve
 ```
