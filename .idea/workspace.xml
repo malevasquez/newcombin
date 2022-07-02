@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c38b616c-db5d-4e71-bd51-49a1f87f1aa6" name="Changes" comment="Layout complete">
+    <list default="true" id="c38b616c-db5d-4e71-bd51-49a1f87f1aa6" name="Changes" comment="Fixed text validation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AppForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppTable.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +74,8 @@
       <updated>1656734747919</updated>
       <workItem from="1656734759653" duration="2565000" />
       <workItem from="1656737490879" duration="12440000" />
-      <workItem from="1656768203513" duration="12095000" />
+      <workItem from="1656768203513" duration="12768000" />
+      <workItem from="1656781771638" duration="1299000" />
     </task>
     <task id="LOCAL-00001" summary="Initial files + header (with tabs)">
       <created>1656737777372</created>
@@ -119,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656779748507</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Improved design and style">
+      <created>1656780961527</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1656780961527</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +150,8 @@
     <MESSAGE value="Form fully implemented and began table" />
     <MESSAGE value="API connection working" />
     <MESSAGE value="Layout complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Layout complete" />
+    <MESSAGE value="Improved design and style" />
+    <MESSAGE value="Fixed text validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed text validation" />
   </component>
 </project>

@@ -90,15 +90,15 @@ export default {
       valid: true,
       firstNameRules: [
         v => !!v || 'First name is required',
-        v => (v && v.length > 1) || 'First name must be at least 2 characters long',
+        v => (v && v.replace(/^\s+|\s+$/gm,'').length > 1) || 'First name must be at least 2 characters long',
       ],
       lastNameRules: [
         v => !!v || 'Last name is required',
-        v => (v && v.length > 1) || 'Last name must be at least 2 characters long',
+        v => (v && v.replace(/^\s+|\s+$/gm,'').length > 1) || 'Last name must be at least 2 characters long',
       ],
       addressRules: [
         v => !!v || 'Address is required',
-        v => (v && v.length > 1) || 'Address must be at least 2 characters long',
+        v => (v && v.replace(/^\s+|\s+$/gm,'').length > 1) || 'Address must be at least 2 characters long',
       ],
       ssnRules: [
         (v) => !!v || 'SSN is required',
