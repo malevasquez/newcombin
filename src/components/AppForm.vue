@@ -57,9 +57,9 @@
             color="success"
             class="mr-4"
             rounded
-            @click="send"
+            @click="save"
         >
-          Send
+          Save
         </v-btn>
         </div>
       </v-col>
@@ -111,7 +111,7 @@ export default {
     reset() {
       this.$refs.form.reset()
     },
-    async send () {
+    async save () {
       this.$refs.form.validate();
       this.ssns.push(this.formData.ssn)
       await axios.post("http://localhost:8081/api/members", this.formData)
@@ -126,9 +126,6 @@ form {
   width: 180%;
   margin: auto 35px;
   background: white;
-  border-radius: 10px;
-  text-align: center;
-  align-content: center;
 }
 
 v-text-field {
@@ -136,7 +133,7 @@ v-text-field {
   width: 100%;
   box-sizing: border-box;
   border: 1px solid black;
-  text-align: center;
+
 }
 
 .buttons {

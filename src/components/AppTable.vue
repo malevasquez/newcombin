@@ -11,14 +11,14 @@
     </tr>
     </thead>
     <tbody>
-    <tr
+    <tr class="noBorder"
         v-for="member in members"
         v-bind:key="member.ssn"
     >
-      <td>{{member.firstName}}</td>
-      <td>{{member.lastName}}</td>
-      <td>{{member.address}}</td>
-      <td>{{member.ssn}}</td>
+      <td class="noBorder">{{member.firstName}}</td>
+      <td class="noBorder">{{member.lastName}}</td>
+      <td class="noBorder">{{member.address}}</td>
+      <td class="noBorder">{{member.ssn}}</td>
     </tr>
     </tbody>
   </table>
@@ -54,13 +54,20 @@ table {
   text-align: center;
   padding-right: 40px;
   padding-left: 10px;
+  border: 1px solid black;
 
 }
 td {
   padding: 3px 3px 3px 3px;
-  outline: 1px solid black;
   text-align: center;
+  border: 1px solid black;
 }
+
+td.noBorder {
+  border-bottom: 0;
+  border-top: 0;
+}
+
 
 .table-container {
   background-color: white;
