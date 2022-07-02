@@ -1,24 +1,25 @@
 # newcombin
+This project was created as part of the NewCombin Challenge.
 
-## Project setup
+## Project Setup
+Clone the repository. Once inside the project folder, run the following command in order to install the dependencies
+```
+cd newcombin
+```
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Start API Server
+This project requires an API server. To start the server locate the `devskills` folder and run the following commands
 ```
+cd devskills
+npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compile and Run
+Once the API server is set up return to the root folder and run the project using
 ```
-npm run build
+npm run serve
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
