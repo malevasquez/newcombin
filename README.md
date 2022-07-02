@@ -17,6 +17,7 @@ cd devskills
 npm install
 npm run serve
 ```
+If there's issues installing the dependencies, clone the `devskills` repository from https://github.com/newcombin/devskills and repeat the previous steps.
 
 ### Compile and Run
 Once the API server is set up run the project from the root folder using
